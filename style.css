@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("hehe.png");
+  background-size: cover;
+  font-size: 20px;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container #longTextForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  font-family: "Poppins", sans-serif;
+  grid-gap: 15px;
+  position: relative;
+  font-size: 1rem;
+  padding: 15px;
+  background: #EEEEEE;
+  width: 500px;
+  margin: auto;
+  box-shadow: 0 45px 65px rgba(0,0,0,0.50), 0 35px 22px rgba(0,0,0,0.16);
+  border-radius: 10px;
+}
+.container #longTextForm::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-image: url("hehe.png");
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+}
+.container #longTextForm #title {
+  grid-row: 1;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  z-index: 7;
+}
+.container #longTextForm #description {
+  grid-row: 2;
+  font-size: 0.9rem;
+  color: #000000;
+}
+.container #longTextForm #inputText, .container #longTextForm #inputNumber {
+  background-color: #FFFFFF;
+  font-size: 1rem;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+
+}
+.container #longTextForm #inputText {
+  grid-row: 3;
+}
+.container #longTextForm #inputNumber {
+  grid-row: 4;
+}
+.container #longTextForm #submitButton {
+  grid-row: 5;
+  padding: 8px;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+  background-color: #9FC9F3;
+  color: #FFF;
+  border-radius: 6px;
+  transition: all .2s ease-in-out;
+}
+.container #longTextForm #submitButton:hover {
+  cursor: pointer;
+  background-color: #9FC9F3;
+  transform: scale(1.03);
+}
+.container #longTextForm #output {
+  grid-row: 6;
+  width: 100%;
+  text-wrap: wrap;
+  overflow-wrap: anywhere;
+}
